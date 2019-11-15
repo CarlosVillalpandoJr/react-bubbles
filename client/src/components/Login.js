@@ -15,12 +15,12 @@ const Login = (props) => {
   }
 
   const handleLogin = event => {
-    console.log(inputs)
+    // console.log(inputs)
     event.preventDefault();
     axiosWithAuth()
       .post('/login', inputs)
       .then(response => {
-        console.log('HandleLogin Post: ', response)
+        // console.log('HandleLogin Post: ', response)
         sessionStorage.setItem('token', response.data.payload)
         props.history.push('/protectedBubblePage')
       })
